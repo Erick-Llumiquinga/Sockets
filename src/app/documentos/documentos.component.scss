@@ -1,9 +1,25 @@
-textarea {
+.content {
     position: fixed;
     width: calc(100% - 235px);
-    height: 100%;
     right: 0;
-    top: 0;
+    height: 100%;
+    padding-top: 20px;
+    padding: 20px 0px 20px 15px;
+    
+        label {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16pt;
+        }
+}
+
+
+textarea {
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    right: 15%;
+    top: 30%;
+    background-color: rgba(122, 240, 98, 0.562);
     font-size: 18pt;
     padding-top: 20px;
     resize: none;

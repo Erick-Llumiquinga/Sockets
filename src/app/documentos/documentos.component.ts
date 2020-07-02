@@ -17,8 +17,10 @@ export class DocumentosComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._docSub = this.documentosServices.documentoActual.pipe(
-      startWith({id: '', doc: 'Seleccione un documento o cree uno nuevo'})
-    ).subscribe(documento => this.documento = documento);
+      startWith({id: '', doc: 'Seleccione un documento o cree uno nuevo', date: null})
+    ).subscribe(documento =>{
+      this.documento = documento
+    });
   }
 
   ngOnDestroy(){
@@ -26,7 +28,7 @@ export class DocumentosComponent implements OnInit, OnDestroy {
   }
 
   editDoc = () => {
-    this.documentosServices.editDoc(this.documento);
+    this.documentosServices.editDoc(this.documento)
   }
 
 }

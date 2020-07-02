@@ -1,2 +1,4 @@
-<textarea [(ngModel)]='documento.doc' (keyup)='editDoc()' placeholder="Escriba el texto">
-</textarea>
+<div class="content">
+    <label>La última modificación fue realizada por {{documento.doc}}, {{documento.date}} </label>
+    <textarea [(ngModel)]='documento.doc' (keyup)='editDoc()' placeholder="Escriba el texto"></textarea>
+</div>
